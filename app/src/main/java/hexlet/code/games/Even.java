@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Even {
-    public static final Scanner SCANNER = new Scanner(System.in);
+    private static final Scanner SCANNER = new Scanner(System.in);
     private static final Random RANDOM = new Random();
     private static final int CORRECT_ANSWERS_LIMIT = 3;
 
