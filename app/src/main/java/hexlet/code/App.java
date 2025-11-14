@@ -5,4 +5,8 @@ public class App {
         System.out.println("Welcome to the Brain Games!");
         Cli.askUserName();
     }
+
+    private App() {
+
+    }
 }
