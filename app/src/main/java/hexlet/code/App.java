@@ -1,6 +1,11 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Calculator;
+import hexlet.code.games.Even;
+import hexlet.code.games.Game;
+import hexlet.code.games.Gcd;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 
 import java.util.Map;
 import java.util.Optional;
@@ -11,7 +16,8 @@ public class App {
             2, new Even(),
             3, new Calculator(),
             4, new Gcd(),
-            5, new Progression()
+            5, new Progression(),
+            6, new Prime()
     );
 
     public static void main(String[] args) {
@@ -21,6 +27,7 @@ public class App {
         System.out.println("3 - Calculator");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
         Scanner scanner = new Scanner(System.in);
