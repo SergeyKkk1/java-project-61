@@ -12,3 +12,5 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=SergeyKkk1_java-project-61&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=SergeyKkk1_java-project-61)
 ### Even game demonstration
 [![asciicast](https://asciinema.org/a/ufi9sy9HXwzuyjVq1gsf3IHWQ.svg)](https://asciinema.org/a/ufi9sy9HXwzuyjVq1gsf3IHWQ)
+### Calculator game demonstration
+[![asciicast](https://asciinema.org/a/6ScI8rxLR3G7mNwn6ETluPs6e.svg)](https://asciinema.org/a/6ScI8rxLR3G7mNwn6ETluPs6e)
