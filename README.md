@@ -14,3 +14,5 @@
 [![asciicast](https://asciinema.org/a/ufi9sy9HXwzuyjVq1gsf3IHWQ.svg)](https://asciinema.org/a/ufi9sy9HXwzuyjVq1gsf3IHWQ)
 ### Calculator game demonstration
 [![asciicast](https://asciinema.org/a/6ScI8rxLR3G7mNwn6ETluPs6e.svg)](https://asciinema.org/a/6ScI8rxLR3G7mNwn6ETluPs6e)
+### GCD game demonstration
+[![asciicast](https://asciinema.org/a/0KbG3V251KUtLrR49y09mbUDt.svg)](https://asciinema.org/a/0KbG3V251KUtLrR49y09mbUDt)
