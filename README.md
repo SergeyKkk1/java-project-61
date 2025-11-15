@@ -16,3 +16,5 @@
 [![asciicast](https://asciinema.org/a/6ScI8rxLR3G7mNwn6ETluPs6e.svg)](https://asciinema.org/a/6ScI8rxLR3G7mNwn6ETluPs6e)
 ### GCD game demonstration
 [![asciicast](https://asciinema.org/a/0KbG3V251KUtLrR49y09mbUDt.svg)](https://asciinema.org/a/0KbG3V251KUtLrR49y09mbUDt)
+### Progression game demonstration
+[![asciicast](https://asciinema.org/a/C2gvKJfRDixzJ1eNNFjUUrpkD.svg)](https://asciinema.org/a/C2gvKJfRDixzJ1eNNFjUUrpkD)
