@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.Calculator;
 import hexlet.code.games.Even;
 import hexlet.code.games.Game;
+import hexlet.code.games.Gcd;
 
 import java.util.Map;
 import java.util.Optional;
@@ -11,7 +12,8 @@ import java.util.Scanner;
 public class App {
     private static final Map<Integer, Game> GAME_NUMBER_TO_GAME = Map.of(
             2, new Even(),
-            3, new Calculator()
+            3, new Calculator(),
+            4, new Gcd()
     );
 
     public static void main(String[] args) {
@@ -19,6 +21,7 @@ public class App {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("3 - Calculator");
+        System.out.println("4 - GCD");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
         Scanner scanner = new Scanner(System.in);
