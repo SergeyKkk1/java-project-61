@@ -18,3 +18,5 @@
 [![asciicast](https://asciinema.org/a/0KbG3V251KUtLrR49y09mbUDt.svg)](https://asciinema.org/a/0KbG3V251KUtLrR49y09mbUDt)
 ### Progression game demonstration
 [![asciicast](https://asciinema.org/a/C2gvKJfRDixzJ1eNNFjUUrpkD.svg)](https://asciinema.org/a/C2gvKJfRDixzJ1eNNFjUUrpkD)
+### Prime game demonstration
+[![asciicast](https://asciinema.org/a/b24IFsTo1csm2tg43GKcLsJFY.svg)](https://asciinema.org/a/b24IFsTo1csm2tg43GKcLsJFY)
