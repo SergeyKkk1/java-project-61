@@ -1,15 +1,16 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/SergeyKkk1/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/SergeyKkk1/java-project-61/actions)
 ### Sonar statuses
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=SergeyKkk1_java-project-61&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=SergeyKkk1_java-project-61)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=SergeyKkk1_java-project-61&metric=bugs)](https://sonarcloud.io/summary/new_code?id=SergeyKkk1_java-project-61)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=SergeyKkk1_java-project-61&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=SergeyKkk1_java-project-61)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=SergeyKkk1_java-project-61&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=SergeyKkk1_java-project-61)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=SergeyKkk1_java-project-61&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=SergeyKkk1_java-project-61)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=SergeyKkk1_java-project-61&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=SergeyKkk1_java-project-61)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=SergeyKkk1_java-project-61&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=SergeyKkk1_java-project-61)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=SergeyKkk1_java-project-61&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=SergeyKkk1_java-project-61)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=SergeyKkk1_java-project-61&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=SergeyKkk1_java-project-61)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=SergeyKkk1_java-project-61&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=SergeyKkk1_java-project-61)
+## Brain Games Project
+Brain Games is a collection of simple console mini-games built to sharpen your logic and reasoning skills. Each game challenges the player with different tasks: from arithmetic quizzes and finding the greatest common divisor, to recognizing number patterns and evaluating mathematical expressions. 
+## How to start this project.
+```
+git clone git@github.com:SergeyKkk1/java-project-61.git
+make build
+make run-dist
+```
+## Games demonstrations
 ### Even game demonstration
 [![asciicast](https://asciinema.org/a/ufi9sy9HXwzuyjVq1gsf3IHWQ.svg)](https://asciinema.org/a/ufi9sy9HXwzuyjVq1gsf3IHWQ)
 ### Calculator game demonstration
