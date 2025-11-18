@@ -2,8 +2,8 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public class Engine {
-    protected static final Scanner SCANNER = new Scanner(System.in);
+public final class Engine {
+    private static final Scanner SCANNER = new Scanner(System.in);
     private static final int CORRECT_ANSWERS_LIMIT = 3;
 
     private Engine() {
@@ -42,7 +42,7 @@ public class Engine {
         System.out.print("Your answer is: ");
     }
 
-    protected static void printWrongAnswerDetails(String playerAnswer, String correctAnswer) {
+    private static void printWrongAnswerDetails(String playerAnswer, String correctAnswer) {
         System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.\n", playerAnswer, correctAnswer);
     }
 }

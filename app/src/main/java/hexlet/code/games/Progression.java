@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Progression extends Game {
+public final class Progression extends Game {
 
     private static final int MIN_PROGRESSION_STEP = 1;
     private static final int MAX_PROGRESSION_STEP = 15;
@@ -27,7 +27,8 @@ public class Progression extends Game {
             int progressionLength = RANDOM.nextInt(MIN_ELEMENTS_IN_PROGRESSION, MAX_ELEMENTS_IN_PROGRESSION);
             int progressionStep = RANDOM.nextInt(MIN_PROGRESSION_STEP, MAX_PROGRESSION_STEP);
             int initialValue = RANDOM.nextInt(MAX_PROGRESSION_INITIAL_VALUE);
-            List<String> progressionElements = generateProgressionElements(initialValue, progressionStep, progressionLength);
+            List<String> progressionElements = generateProgressionElements(initialValue, progressionStep,
+                    progressionLength);
             int missingElementIndex = RANDOM.nextInt(progressionElements.size());
             String missingElement = progressionElements.get(missingElementIndex);
             progressionElements.set(missingElementIndex, "..");

@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class Prime extends Game {
+public final class Prime extends Game {
 
     private static final int RANDOM_NUMBER_BOUND = 200;
     private static final String PRIME_GAME_QUESTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";

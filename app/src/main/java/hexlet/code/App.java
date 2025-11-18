@@ -8,7 +8,7 @@ import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 
-public class App {
+public final class App {
 
     private static final int EVEN_GAME_NUMBER = 2;
     private static final int CALCULATOR_GAME_NUMBER = 3;

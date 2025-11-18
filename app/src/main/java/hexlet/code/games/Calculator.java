@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.List;
 
-public class Calculator extends Game {
+public final class Calculator extends Game {
     private static final List<String> AVAILABLE_OPERATIONS = List.of("+", "-", "*");
     private static final int RANDOM_NUMBER_BOUND = 100;
     private static final String CALCULATOR_GAME_QUESTION = "What is the result of the expression?";
