@@ -9,6 +9,13 @@ import hexlet.code.games.Progression;
 import java.util.Scanner;
 
 public class App {
+
+    private static final int EVEN_GAME_NUMBER = 2;
+    private static final int CALCULATOR_GAME_NUMBER = 3;
+    private static final int GCD_GAME_NUMBER = 4;
+    private static final int PROGRESSION_GAME_NUMBER = 5;
+    private static final int PRIME_GAME_NUMBER = 6;
+
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -26,15 +33,15 @@ public class App {
         }
         if (gameNumber == 1) {
             Cli.askUserName();
-        } else if (gameNumber == 2) {
+        } else if (gameNumber == EVEN_GAME_NUMBER) {
             Even.play();
-        } else if (gameNumber == 3) {
+        } else if (gameNumber == CALCULATOR_GAME_NUMBER) {
             Calculator.play();
-        } else if (gameNumber == 4) {
+        } else if (gameNumber == GCD_GAME_NUMBER) {
             Gcd.play();
-        } else if (gameNumber == 5) {
+        } else if (gameNumber == PROGRESSION_GAME_NUMBER) {
             Progression.play();
-        } else if (gameNumber == 6) {
+        } else if (gameNumber == PRIME_GAME_NUMBER) {
             Prime.play();
         }
     }
