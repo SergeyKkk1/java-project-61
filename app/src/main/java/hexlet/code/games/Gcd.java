@@ -23,6 +23,9 @@ public final class Gcd extends Game {
 
     private static int calculateCorrectAnswer(int firstNumber, int secondNumber) {
         int result = Math.min(firstNumber, secondNumber);
+        if (firstNumber == 0 || secondNumber == 0) {
+            return Math.max(firstNumber, secondNumber);
+        }
         while (result > 0) {
             if (firstNumber % result == 0 && secondNumber % result == 0) {
                 break;
