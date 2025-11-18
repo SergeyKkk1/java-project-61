@@ -33,7 +33,7 @@ public final class Prime extends Game {
             return false;
         } else {
             double sqrted = Math.sqrt(number);
-            for (int i = 2; i < sqrted; i++) {
+            for (int i = 2; i <= sqrted; i++) {
                 if (number % i == 0) {
                     return false;
                 }
