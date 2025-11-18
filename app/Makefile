@@ -7,3 +7,7 @@ install:
 all: install
 run-dist: install
 	$(APP_PATH)
+
+build:
+	./gradlew build
+.PHONY: build

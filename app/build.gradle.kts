@@ -1,5 +1,4 @@
 plugins {
-    id("java")
     application
     id("org.sonarqube") version "7.0.1.6134"
     checkstyle
@@ -14,11 +13,6 @@ repositories {
 
 application {
     mainClass = "hexlet.code.App"
-}
-
-dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
 tasks.test {

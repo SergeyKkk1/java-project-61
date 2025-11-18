@@ -1,33 +1,35 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import java.util.List;
 
 public class Calculator extends Game {
     private static final List<String> AVAILABLE_OPERATIONS = List.of("+", "-", "*");
     private static final int RANDOM_NUMBER_BOUND = 100;
+    private static final String CALCULATOR_GAME_QUESTION = "What is the result of the expression?";
 
-    @Override
-    public void printTask() {
-        System.out.println("What is the result of the expression?");
+    private Calculator() {
     }
 
-    @Override
-    public boolean askQuestion() {
-        int firstNumber = RANDOM.nextInt(RANDOM_NUMBER_BOUND);
-        int secondNumber = RANDOM.nextInt(RANDOM_NUMBER_BOUND);
-        int operationIndex = RANDOM.nextInt(AVAILABLE_OPERATIONS.size());
-        String operation = AVAILABLE_OPERATIONS.get(operationIndex);
-        printQuestionDetails(String.format("%s %s %s", firstNumber, operation, secondNumber));
-        int playerAnswer = SCANNER.nextInt();
-        int correctAnswer = calculateCorrectAnswer(firstNumber, secondNumber, operation);
-        boolean isCorrectAnswer = correctAnswer == playerAnswer;
-        if (!isCorrectAnswer) {
-            printWrongAnswerDetails(String.valueOf(playerAnswer), String.valueOf(correctAnswer));
+    public static void play() {
+        Engine.startGame(CALCULATOR_GAME_QUESTION, generateQuestionToAnswer());
+    }
+
+    private static String[][] generateQuestionToAnswer() {
+        String[][] questionToAnswer = new String[QUESTIONS_LIMIT][2];
+        for (int i = 0; i < QUESTIONS_LIMIT; i++) {
+            int firstNumber = RANDOM.nextInt(RANDOM_NUMBER_BOUND);
+            int secondNumber = RANDOM.nextInt(RANDOM_NUMBER_BOUND);
+            int operationIndex = RANDOM.nextInt(AVAILABLE_OPERATIONS.size());
+            String operation = AVAILABLE_OPERATIONS.get(operationIndex);
+            questionToAnswer[i][0] = String.format("%s %s %s", firstNumber, operation, secondNumber);
+            questionToAnswer[i][1] = String.valueOf(calculateCorrectAnswer(firstNumber, secondNumber, operation));
         }
-        return isCorrectAnswer;
+        return questionToAnswer;
     }
 
-    private int calculateCorrectAnswer(int firstNumber, int secondNumber, String operation) {
+    private static int calculateCorrectAnswer(int firstNumber, int secondNumber, String operation) {
         return switch (operation) {
             case "+" -> firstNumber + secondNumber;
             case "-" -> firstNumber - secondNumber;

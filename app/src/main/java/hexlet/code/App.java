@@ -2,24 +2,13 @@ package hexlet.code;
 
 import hexlet.code.games.Calculator;
 import hexlet.code.games.Even;
-import hexlet.code.games.Game;
 import hexlet.code.games.Gcd;
 import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
 
-import java.util.Map;
-import java.util.Optional;
 import java.util.Scanner;
 
 public class App {
-    private static final Map<Integer, Game> GAME_NUMBER_TO_GAME = Map.of(
-            2, new Even(),
-            3, new Calculator(),
-            4, new Gcd(),
-            5, new Progression(),
-            6, new Prime()
-    );
-
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -35,13 +24,19 @@ public class App {
         if (gameNumber != 0) {
             System.out.println("Welcome to the Brain Games!");
         }
-        Optional<Game> game = Optional.empty();
         if (gameNumber == 1) {
             Cli.askUserName();
-        } else {
-            game = Optional.ofNullable(GAME_NUMBER_TO_GAME.get(gameNumber));
+        } else if (gameNumber == 2) {
+            Even.play();
+        } else if (gameNumber == 3) {
+            Calculator.play();
+        } else if (gameNumber == 4) {
+            Gcd.play();
+        } else if (gameNumber == 5) {
+            Progression.play();
+        } else if (gameNumber == 6) {
+            Prime.play();
         }
-        game.ifPresent(Engine::startGame);
     }
 
     private App() {
