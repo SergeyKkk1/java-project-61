@@ -12,7 +12,7 @@ public class Progression extends Game {
     private static final int MIN_ELEMENTS_IN_PROGRESSION = 5;
     private static final int MAX_ELEMENTS_IN_PROGRESSION = 10;
     private static final int MAX_PROGRESSION_INITIAL_VALUE = 20;
-    private static final String PROGRESSION_GAME_QUESTION = "Find the greatest common divisor of given numbers.";
+    private static final String PROGRESSION_GAME_QUESTION = "What number is missing in the progression?";
 
     private Progression() {
     }
