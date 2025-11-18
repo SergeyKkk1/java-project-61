@@ -7,11 +7,10 @@ public class Cli {
         System.out.print("May I have your name? ");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
-        System.out.println("Hello, " + name);
+        System.out.printf("Hello, %s!\n", name);
         return name;
     }
 
     private Cli() {
-
     }
 }
