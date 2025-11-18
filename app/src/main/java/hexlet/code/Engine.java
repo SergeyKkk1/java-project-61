@@ -9,20 +9,6 @@ public class Engine {
     private Engine() {
     }
 
-//    public static void startGame(Game game) {
-//        String userName = Cli.askUserName();
-//        game.printTask();
-//        int correctAnswers = 0;
-//        while (game.askQuestion() && ++correctAnswers < CORRECT_ANSWERS_LIMIT) {
-//            System.out.println("Correct!");
-//        }
-//        if (correctAnswers == CORRECT_ANSWERS_LIMIT) {
-//            System.out.printf("Congratulations, %s!\n", userName);
-//        } else {
-//            System.out.printf("Let's try again, %s!\n", userName);
-//        }
-//    }
-
     public static void startGame(String mainGameQuestion, String[][] questionsAndAnswers) {
         String userName = Cli.askUserName();
         System.out.println(mainGameQuestion);
