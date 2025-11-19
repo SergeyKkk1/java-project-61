@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public final class Even extends Game {
+public final class Even {
     private static final int RANDOM_NUMBER_BOUND = 1000;
     private static final String EVEN_GAME_QUESTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
@@ -14,9 +14,9 @@ public final class Even extends Game {
     }
 
     private static String[][] generateQuestionToAnswer() {
-        String[][] answers = new String[QUESTIONS_LIMIT][2];
-        for (int i = 0; i < QUESTIONS_LIMIT; i++) {
-            int number = RANDOM.nextInt(RANDOM_NUMBER_BOUND);
+        String[][] answers = new String[Engine.ROUNDS][2];
+        for (int i = 0; i < Engine.ROUNDS; i++) {
+            int number = Engine.RANDOM.nextInt(RANDOM_NUMBER_BOUND);
             boolean isEven = number % 2 == 0;
             String answer = isEven ? "yes" : "no";
             answers[i][0] = String.valueOf(number);

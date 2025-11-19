@@ -1,10 +1,11 @@
 package hexlet.code;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public final class Engine {
-    private static final Scanner SCANNER = new Scanner(System.in);
-    private static final int CORRECT_ANSWERS_LIMIT = 3;
+    public static final int ROUNDS = 3;
+    public static final Random RANDOM = new Random();
 
     private Engine() {
     }
@@ -13,18 +14,23 @@ public final class Engine {
         String userName = Cli.askUserName();
         System.out.println(mainGameQuestion);
         int correctAnswersCount = 0;
-        String playerAnswer;
-        String correctAnswer;
-        do {
-            printQuestionDetails(questionsAndAnswers[correctAnswersCount][0]);
-            playerAnswer = SCANNER.next();
-            correctAnswer = questionsAndAnswers[correctAnswersCount][1];
-        } while (isAnswerCorrect(playerAnswer, correctAnswer) && ++correctAnswersCount < CORRECT_ANSWERS_LIMIT);
+        String playerAnswer = null;
+        String correctAnswer = null;
+        for (String[] questionWithAnswer : questionsAndAnswers) {
+            System.out.println("Question: " + questionWithAnswer[0]);
+            System.out.print("Your answer is: ");
+            Scanner scanner = new Scanner(System.in);
+            playerAnswer = scanner.next();
+            correctAnswer = questionWithAnswer[1];
+            if (!isAnswerCorrect(playerAnswer, correctAnswer) || ++correctAnswersCount >= ROUNDS) {
+                break;
+            }
+        }
 
-        if (correctAnswersCount == CORRECT_ANSWERS_LIMIT) {
+        if (correctAnswersCount == ROUNDS) {
             System.out.printf("Congratulations, %s!\n", userName);
         } else {
-            printWrongAnswerDetails(playerAnswer, correctAnswer);
+            System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.\n", playerAnswer, correctAnswer);
             System.out.printf("Let's try again, %s!\n", userName);
         }
     }
@@ -35,14 +41,5 @@ public final class Engine {
             System.out.println("Correct!");
         }
         return isCorrectAnswer;
-    }
-
-    private static void printQuestionDetails(String question) {
-        System.out.println("Question: " + question);
-        System.out.print("Your answer is: ");
-    }
-
-    private static void printWrongAnswerDetails(String playerAnswer, String correctAnswer) {
-        System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'.\n", playerAnswer, correctAnswer);
     }
 }

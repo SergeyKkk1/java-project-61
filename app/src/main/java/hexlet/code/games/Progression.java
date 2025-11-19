@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Progression extends Game {
+public final class Progression {
 
     private static final int MIN_PROGRESSION_STEP = 1;
     private static final int MAX_PROGRESSION_STEP = 15;
@@ -22,14 +22,14 @@ public final class Progression extends Game {
     }
 
     private static String[][] generateQuestionToAnswer() {
-        String[][] questionToAnswer = new String[QUESTIONS_LIMIT][2];
-        for (int i = 0; i < QUESTIONS_LIMIT; i++) {
-            int progressionLength = RANDOM.nextInt(MIN_ELEMENTS_IN_PROGRESSION, MAX_ELEMENTS_IN_PROGRESSION);
-            int progressionStep = RANDOM.nextInt(MIN_PROGRESSION_STEP, MAX_PROGRESSION_STEP);
-            int initialValue = RANDOM.nextInt(MAX_PROGRESSION_INITIAL_VALUE);
+        String[][] questionToAnswer = new String[Engine.ROUNDS][2];
+        for (int i = 0; i < Engine.ROUNDS; i++) {
+            int progressionLength = Engine.RANDOM.nextInt(MIN_ELEMENTS_IN_PROGRESSION, MAX_ELEMENTS_IN_PROGRESSION);
+            int progressionStep = Engine.RANDOM.nextInt(MIN_PROGRESSION_STEP, MAX_PROGRESSION_STEP);
+            int initialValue = Engine.RANDOM.nextInt(MAX_PROGRESSION_INITIAL_VALUE);
             List<String> progressionElements = generateProgressionElements(initialValue, progressionStep,
                     progressionLength);
-            int missingElementIndex = RANDOM.nextInt(progressionElements.size());
+            int missingElementIndex = Engine.RANDOM.nextInt(progressionElements.size());
             String missingElement = progressionElements.get(missingElementIndex);
             progressionElements.set(missingElementIndex, "..");
             String progressionElementsString = String.join(" ", progressionElements);

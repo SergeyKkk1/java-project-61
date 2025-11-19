@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public final class Prime extends Game {
+public final class Prime {
 
     private static final int RANDOM_NUMBER_BOUND = 200;
     private static final String PRIME_GAME_QUESTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
@@ -15,9 +15,9 @@ public final class Prime extends Game {
     }
 
     private static String[][] generateQuestionToAnswer() {
-        String[][] questionToAnswer = new String[QUESTIONS_LIMIT][2];
-        for (int i = 0; i < QUESTIONS_LIMIT; i++) {
-            int number = RANDOM.nextInt(RANDOM_NUMBER_BOUND);
+        String[][] questionToAnswer = new String[Engine.ROUNDS][2];
+        for (int i = 0; i < Engine.ROUNDS; i++) {
+            int number = Engine.RANDOM.nextInt(RANDOM_NUMBER_BOUND);
             questionToAnswer[i][0] = String.valueOf(number);
             questionToAnswer[i][1] = isPrime(number) ? "yes" : "no";
         }
