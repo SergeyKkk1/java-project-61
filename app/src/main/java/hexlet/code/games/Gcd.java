@@ -6,6 +6,9 @@ public final class Gcd {
     private static final int RANDOM_NUMBER_BOUND = 30;
     private static final String GCD_GAME_QUESTION = "Find the greatest common divisor of given numbers.";
 
+    private Gcd() {
+    }
+
     public static void play() {
         Engine.startGame(GCD_GAME_QUESTION, generateQuestionToAnswer());
     }
